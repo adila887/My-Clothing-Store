@@ -1,0 +1,142 @@
+/* Reset margin dan padding untuk semua elemen */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Atur font dan warna latar belakang halaman */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Gaya untuk header */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Gaya untuk navigasi */
+nav ul {
+  list-style-type: none;
+  background-color: #444;
+  padding: 10px;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Gaya untuk section "Our Latest Collection */
+#latest-collection {
+  display: flex;
+  justify-content: flex-start; /* Teks sejajar dikiri */
+  align-items: center; /*Teks rata tengah secara vertikal */
+  padding: 10px;
+}
+
+#latest-collection .collection-text {
+  display: flex; /* Mengatur h2 dan p sebagai flex item */
+  align-items: center; /* Menyenyajarkan h2 dan p secara vertikal */
+  gap: 20px; /* Jarak antara h2 dan p */
+}
+
+#latest-collection h2 {
+  font-size: 24px;
+  margin: 0; /* Menghilangkan margin default */
+}
+
+#latest-collection p {
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+/* Gaya untuk footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center; /* Memusatkan text secara horizontal */
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  display: flex; /* Mengubah footer menjadi flex container */
+  justify-content: center; /* Memusatkan isi footer secara horizontal */
+  align-items: center; /* Memusatkan isi footer secara vertikal */
+}
+
+footer p {
+  margin: 0; /* Menghapus margin default pada paragraf */
+}
+
+/* Default untuk laptop atau layar besar (menampilkan 6 gambar per baris) */
+#products {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 6 kolom untuk tampilan dekstop */
+  gap: 20px; /* Jarak antara produk */
+  padding: 10px;
+  justify-content: space-around;
+}
+
+h2,
+p {
+  margin: 0 0 20px;
+}
+
+.product-container {
+  display: flex; /* Menggunkan grid untuk menampilkan produk */
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 10px; /* Jarak antara produk */
+  margin-top: 20px;
+}
+
+.product {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+}
+
+.product img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 5px;
+}
+
+.product h3 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.product p {
+  margin: 5px 0;
+}
+
+/* Media query untuk layar HP atau tablet kecil */
+@media (max-width: 768px) {
+  #products {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /*Menampilkan 2 kolom untuk layar kecil */
+  }
+  .product img {
+    max-width: 100%;
+    height: auto;
+  }
+}
